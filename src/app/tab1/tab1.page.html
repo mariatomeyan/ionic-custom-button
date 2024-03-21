@@ -12,6 +12,16 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <app-custom-button
+          [label]="isLoading ? 'Loading Button' : 'Default Button'"
+          (btnClick)="downloadData()"
+          [isLoading]="isLoading"
+           />
+      </ion-col>
+      <ion-col> {{ data | json}}</ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

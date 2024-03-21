@@ -1,0 +1,6 @@
+<ion-button (click)="btnClick.emit()" [class.isLoading]="isLoading">
+  <ng-container *ngIf="isLoading">
+    <ion-spinner ></ion-spinner>
+  </ng-container>
+  <ng-container>{{ label }}</ng-container>
+</ion-button>
